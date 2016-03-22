@@ -9,10 +9,9 @@ import win32print
 
 
 class WinPrinter:
-    includes = []
 
     def __init__(self, printer_name=None, config_file_path=None,
-                 tmp_location=None, includes=None):
+                 tmp_location=None):
         if config_file_path is None:
             self.config_file_path = os.path.dirname(os.path.realpath(__file__))
             self.config_file_path += '\\config.json'
@@ -31,10 +30,6 @@ class WinPrinter:
         else:
             self.tmp_location = tmp_location
         self.tmp_path = self.tmp_location + 'win_print_tmp_file'
-        self.includes = config['win_printer']['includes']
-        if includes is not None:
-            for include in includes:
-                self.includes.append(include)
 
     def print_file(self, filepath):
         command = '"' + self.gs_print_path + '" -ghostscript '
