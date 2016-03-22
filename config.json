@@ -1,0 +1,9 @@
+{
+    "win_printer":
+    {
+        "ghost_script_path": "C:/Program Files/gs/gs9.18/bin/gswin64.exe",
+        "gs_print_path": "C:/Program Files/gsprint/gsprint.exe",
+        "tmp_location": "C:/Temp/",
+        "includes": ["C:/Program Files/gs/gs9.18/init"]
+    }
+}
